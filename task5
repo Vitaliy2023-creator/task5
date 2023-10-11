@@ -1,1 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <locale.h>
+#include <math.h>
+int main()
+{
+	setlocale(LC_CTYPE, "RUS");
+	float x, y,result;
+	printf("Введите x: ");
+	scanf("%f", &x);
+	printf("Введите y: ");
+	scanf("%f", &y);
+	result = (1 + pow(sin(x + y), 2)) / (2 + fabs(x - (2 * x) / (1 + x * x + y * y)))+x;
+	printf("F(%.4f, %.4f)=%.4f\n", x, y, result);
+	system("pause");
+	return 0;
+}
